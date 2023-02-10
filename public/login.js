@@ -44,6 +44,7 @@ function LoginForm(props) {
           console.log('JSON:', data);
           console.log('Logged In:', data.email);
           localStorage.setItem("curr_user", JSON.stringify(data));
+          document.getElementById('user').innerHTML="Logged in as: " + data.name;
         } catch (err) {
           props.setStatus(text)
           console.log('err:', text);

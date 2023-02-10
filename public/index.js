@@ -20,6 +20,15 @@ function Spa() {
   );
 }
 
+const currUser = JSON.parse(localStorage.getItem("curr_user"));
+if (currUser){
+  document.getElementById('user').innerHTML="Logged in as: " + currUser.name;
+
+}
+else
+{
+  document.getElementById('user').innerHTML='LOGIN';
+}
 ReactDOM.render(
   <Spa/>,
   document.getElementById('root')
